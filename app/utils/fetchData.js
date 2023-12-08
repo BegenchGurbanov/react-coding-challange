@@ -1,3 +1,4 @@
+"use client";
 export async function fetchImages(currentPage) {
   console.log("fetching images for page: ", currentPage);
   try {
@@ -9,6 +10,3 @@ export async function fetchImages(currentPage) {
     console.log(error);
   }
 }
-
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch
-// https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
