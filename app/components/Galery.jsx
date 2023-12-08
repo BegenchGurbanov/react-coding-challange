@@ -27,18 +27,14 @@ function Galery() {
 
     const handleScroll = () => {
       console.log("you're at the bottom of the page new data will be fetched");
-      //   if (
-      //     window.innerHeight + document.documentElement.scrollTop ===
-      //     document.documentElement.offsetHeight
-      //   ) {
-      const hasReachedBottom =
+      if (
         document.documentElement.offsetHeight -
           (window.innerHeight + document.documentElement.scrollTop) <=
-        10;
-      setCurrentPage(currentPage + 1);
-      //setCurrentPage(currentPage + 1);
-      // Show loading spinner and make fetch request to api
-      //}
+        10
+      ) {
+        setCurrentPage(currentPage + 1);
+        // Show loading spinner and make fetch request to api
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
