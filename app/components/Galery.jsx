@@ -42,14 +42,11 @@ function Galery() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  });
+  }, []);
 
   // STYLES :https://tailwindcss.com/docs/grid-template-columns
   return (
-    <ul
-      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-4 p-4 "
-      style={{ height: "100%" }}
-    >
+    <ul className="grid grid-cols-1 h-full md:grid-cols-2 lg:grid-cols-4  gap-4 p-4 ">
       {/* for each image create an Image component */}
       {images.map((image) => (
         <ImageCard

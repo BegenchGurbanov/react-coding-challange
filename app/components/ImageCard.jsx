@@ -17,8 +17,8 @@ function ImageCard({ imgUrl, altDescription }) {
 
   return (
     <>
-      <li style={{ width: "100%", height: "500px" }} onClick={openModal}>
-        <div style={{ position: "relative", width: "100%", height: "100%" }}>
+      <li className="w-full h-[500px]" onClick={openModal}>
+        <div className="relative w-full h-full">
           <Image
             src={imgUrl}
             alt={altDescription}

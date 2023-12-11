@@ -1,5 +1,5 @@
 "use client";
-export async function fetchImages(currentPage) {
+export const fetchImages = async (currentPage) => {
   console.log("fetching images for page: ", currentPage);
   try {
     const response = await fetch(
@@ -9,4 +9,4 @@ export async function fetchImages(currentPage) {
   } catch (error) {
     console.log(error);
   }
-}
+};
