@@ -17,19 +17,18 @@ function ImageCard({ imgUrl, altDescription }) {
 
   return (
     <>
-      <li className="w-full h-[500px]" onClick={openModal}>
-        <div className="relative w-full h-full">
-          <Image
-            src={imgUrl}
-            alt={altDescription}
-            layout="fill"
-            objectFit="cover"
-            objectPosition="center"
-            className="rounded"
-            loading="lazy"
-          />
-        </div>
-      </li>
+      <Image
+        onClick={openModal}
+        src={imgUrl}
+        alt={altDescription}
+        unoptimized="true"
+        width={300}
+        height={300}
+        layout="responsive"
+        loading="lazy"
+        className="rounded"
+      />
+
       {isModalOpen && (
         <ImageModal
           imgUrl={imgUrl}
