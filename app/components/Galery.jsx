@@ -42,11 +42,11 @@ function Galery() {
 
   return (
     <>
-      <div className="gap-4 my-10 px-6">
+      <div className="gap-4 my-6 px-20">
         <ResponsiveMasonry
           columnsCountBreakPoints={{ 200: 1, 768: 2, 1024: 4 }}
         >
-          <Masonry gutter="20px">
+          <Masonry gutter="10px">
             {images.map((image) => (
               <ImageCard
                 key={image.id}

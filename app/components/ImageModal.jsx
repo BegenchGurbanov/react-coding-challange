@@ -5,7 +5,7 @@ import Image from "next/image";
 function ImageModal({ imgUrl, altDescription, closeModal }) {
   return (
     <div
-      className="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-75 flex justify-center items-center z-50"
+      className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex justify-center items-center z-50"
       onClick={closeModal}
     >
       <div className="relative">

@@ -26,7 +26,7 @@ function ImageCard({ imgUrl, altDescription }) {
         height={300}
         layout="responsive"
         loading="lazy"
-        className="rounded"
+        className="h-72 w-full object-cover rounded-lg shadow-md"
       />
 
       {isModalOpen && (
