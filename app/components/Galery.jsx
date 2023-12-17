@@ -2,12 +2,11 @@
 import { useEffect, useState } from "react";
 import { fetchImages } from "../utils/fetchData";
 import ImageCard from "./ImageCard";
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 function Galery() {
   const [images, setImages] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  //console.log("images>>>>>", images);
-  //   fetch images from the API and set the images state
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -23,8 +22,6 @@ function Galery() {
 
   //   handle scroll
   useEffect(() => {
-    // when user scrolls to the bottom of the page, fetch more images
-
     const handleScroll = () => {
       console.log("you're at the bottom of the page new data will be fetched");
       if (
@@ -33,7 +30,6 @@ function Galery() {
         10
       ) {
         setCurrentPage(currentPage + 1);
-        // Show loading spinner and make fetch request to api
       }
     };
 
@@ -42,20 +38,26 @@ function Galery() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [currentPage]);
 
-  // STYLES :https://tailwindcss.com/docs/grid-template-columns
   return (
-    <ul className="grid grid-cols-1 h-full md:grid-cols-2 lg:grid-cols-4  gap-4 p-4 ">
-      {/* for each image create an Image component */}
-      {images.map((image) => (
-        <ImageCard
-          key={image.id}
-          imgUrl={image.urls.small}
-          altDescription={image.alt_description}
-        />
-      ))}
-    </ul>
+    <>
+      <div className="gap-4 my-10 px-6">
+        <ResponsiveMasonry
+          columnsCountBreakPoints={{ 200: 1, 768: 2, 1024: 4 }}
+        >
+          <Masonry gutter="20px">
+            {images.map((image) => (
+              <ImageCard
+                key={image.id}
+                imgUrl={image.urls.small}
+                altDescription={image.alt_description}
+              />
+            ))}
+          </Masonry>
+        </ResponsiveMasonry>
+      </div>
+    </>
   );
 }
 
