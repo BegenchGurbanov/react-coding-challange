@@ -12,10 +12,10 @@ function ImageModal({ imgUrl, altDescription, closeModal }) {
         <Image
           src={imgUrl}
           alt={altDescription}
-          layout="intrinsic"
+          layout="responsive"
           width={800}
           height={600}
-          objectFit="contain"
+          objectFit="cover"
           objectPosition="center"
           className="rounded"
         />
