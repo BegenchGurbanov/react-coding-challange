@@ -1,6 +1,6 @@
 "use client";
 
-const HeaderSearch = () => {
+const Header = () => {
   return (
     <div className="bg-gray-900 flex items-center py-10">
       <div className="max-w-md mx-auto w-full">
@@ -11,4 +11,4 @@ const HeaderSearch = () => {
     </div>
   );
 };
-export default HeaderSearch;
+export default Header;

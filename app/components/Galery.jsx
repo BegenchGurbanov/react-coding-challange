@@ -42,7 +42,7 @@ function Galery() {
 
   return (
     <>
-      <div className="gap-4 my-6 px-20">
+      <div className="gap-4 my-6 px-8">
         <ResponsiveMasonry
           columnsCountBreakPoints={{ 200: 1, 768: 2, 1024: 4 }}
         >
