@@ -12,9 +12,9 @@ function ImageModal({ imgUrl, altDescription, closeModal }) {
         <Image
           src={imgUrl}
           alt={altDescription}
-          layout="fixed"
-          width={600}
-          height={800}
+          layout="fixes"
+          width={400}
+          height={600}
           objectFit="contain"
           objectPosition="center"
           className="rounded"
