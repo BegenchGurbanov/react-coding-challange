@@ -1,4 +1,3 @@
-import "bootstrap/dist/css/bootstrap.min.css";
 import Galery from "./components/Galery";
 import Header from "./components/Header";
 export default function Home() {

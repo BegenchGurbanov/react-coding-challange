@@ -11,7 +11,7 @@ function Galery() {
     const fetchData = async () => {
       try {
         const data = await fetchImages(currentPage);
-        setImages([...images, ...data]);
+        setImages([...images, ...data]); // rest operator for groups all remeaining properties inte new object (or named props)
       } catch (error) {
         console.error("Error fetching images:", error);
       }
@@ -34,6 +34,7 @@ function Galery() {
     };
 
     window.addEventListener("scroll", handleScroll);
+    // Event Target method is method that attaches an event handler (handlescroll) to window or my app
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -42,7 +43,7 @@ function Galery() {
 
   return (
     <>
-      <div className="gap-4 my-6 px-8">
+      <div className=" mx-auto px-2 py-2">
         <ResponsiveMasonry
           columnsCountBreakPoints={{ 200: 1, 768: 2, 1024: 4 }}
         >
