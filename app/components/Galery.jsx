@@ -23,13 +23,13 @@ function Galery() {
   //   handle scroll
   useEffect(() => {
     const handleScroll = () => {
-      console.log("you're at the bottom of the page new data will be fetched");
+      // console.log("you're at the bottom of the page new data will be fetched");
       if (
         document.documentElement.offsetHeight -
           (window.innerHeight + document.documentElement.scrollTop) <=
-        10
+        5
       ) {
-        setCurrentPage(currentPage + 1);
+        setCurrentPage((prev) => prev + 1); // changed
       }
     };
 
@@ -39,7 +39,7 @@ function Galery() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [currentPage]);
+  }, []);
 
   return (
     <>

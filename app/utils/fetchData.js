@@ -1,4 +1,4 @@
-"use client";
+"use client"; //For NextJS to detect that this code is for front-end
 export const fetchImages = async (currentPage) => {
   console.log("fetching images for page: ", currentPage);
   try {
@@ -10,3 +10,4 @@ export const fetchImages = async (currentPage) => {
     console.log(error);
   }
 };
+// I used try/catch for to handle error that might occur during rendering or updating

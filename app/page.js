@@ -8,3 +8,5 @@ export default function Home() {
     </>
   );
 }
+//fargment has no effect on resulting DOM
+// DOM is structured representation of HTML in webpage
